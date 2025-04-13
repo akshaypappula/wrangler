@@ -216,3 +216,20 @@ Cask is a trademark of Cask Data, Inc. All rights reserved.
 
 Apache, Apache HBase, and HBase are trademarks of The Apache Software Foundation. Used with
 permission. No endorsement by The Apache Software Foundation is implied by the use of these marks.
+
+### Byte Size and Time Duration Parsers
+
+The Wrangler now supports parsing byte sizes and time durations directly in recipes.
+
+#### Byte Size Format
+- Supports units: B, KB, MB, GB, TB (decimal) and KiB, MiB, GiB, TiB (binary)
+- Example: "10KB", "1.5MiB"
+
+#### Time Duration Format
+- Supports units: ns, ms, s, m, h, d
+- Example: "150ms", "2.5h"
+
+#### Aggregate Stats Directive
+Usage: `aggregate-stats :size_column :time_column :output_size_column :output_time_column [units]`
+
+Example:
